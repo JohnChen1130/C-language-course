@@ -18,7 +18,8 @@ int main(void)
     {
         total = total * 0.8;
         printf("總價是：%d\n", total);
-    } else {
+    } else 
+    {
         printf("總價是：%d\n", total);
     }
 

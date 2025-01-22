@@ -1,26 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
-{
-    int guess, answer;
+int main(void){
+    int guess, answer, count;
     answer = 10;
+    count = 1;
 
-    while (guess != answer) 
-    {
-        printf("Please enter your guess number: ");
-        scanf("%d", &guess);
-        if (guess > answer) 
-        {
+    printf("Please enter your guess: ");
+    scanf("%d", &guess);
+
+    while (guess != answer) {
+        if(guess > answer) {
             printf("Too large!\n");
-        } else if (guess < answer) 
-        {
+        } else {
             printf("Too small!\n");
-        } else 
-        {
-            printf("Correct!!!\n");
         }
+        printf("Please enter your guess: ");
+        scanf("%d", &guess);
+        count = count + 1;
     }
+    printf("Correct!!!(猜%d次)\n", count);
 
     return 0;
 }
+
